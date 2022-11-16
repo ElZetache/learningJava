@@ -39,7 +39,6 @@ public class dividirPalabra {
                 res[pos_array] = (s.substring(x, x + 2));
                 pos_array++;
             }
-
         }
         if (!esPar) {
             res[longitud / 2] = s.substring(longitud - 1, longitud) + "_";
