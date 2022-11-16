@@ -9,9 +9,7 @@ public class Circumferencia {
     public Circumferencia(double grados) {
         // si introducen un valor negativo le damos la vuelta
         if (grados < 0) {
-            while (grados < 0) {
-                grados += 360;
-            }
+            grados = conv_positivo(grados);
         }
         // ahora miramos si los grados no pasan del maximo de 360
         // en caso de que sobrepase calculamos el sobrante
@@ -46,5 +44,13 @@ public class Circumferencia {
             this.grad_circ -= MAX_CIRC;
         }
 
+    }
+    //! los metodos privados no son accesibles desde fuera del objeto, son metodos internos
+    private double conv_positivo(double grados) {
+        while (grados < 0) {
+            grados += 360;
+        }
+
+        return grados;
     }
 }
