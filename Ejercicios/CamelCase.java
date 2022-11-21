@@ -9,13 +9,9 @@ public class CamelCase {
     public static String camelCase(String input) {
         String res = "";
         for (int x = 0; x < input.length(); x++) {
-            if (input.substring(x, x + 1) == input.substring(x, x + 1).toUpperCase())
-                res += " " + input.substring(x, x + 1);
-            else {
-                res += input.substring(x, x + 1);
-            }
+            if (input.substring(x, x + 1).equals(input.substring(x, x + 1).toUpperCase())) res += " " + input.substring(x, x + 1);
+            else res += input.substring(x, x + 1);            
         }
-
         return res;
     }
 }
